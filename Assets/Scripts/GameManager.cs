@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject input_Character;
 
+    public GameObject talk_Tool;
+    public GameObject talk;
+
     private void Awake()
     {
         manager = this;
@@ -58,5 +61,17 @@ public class GameManager : MonoBehaviour
     public void InputCharacter()
     {
         input_Character.SetActive(true);
+    }
+
+    public void InputTalk()
+    {
+        talk.SetActive(true);
+        talk_Tool.SetActive(false);
+    }
+
+    public void CheckTalk()
+    {
+        talk.SetActive(false);
+        talk_Tool.SetActive(false);
     }
 }

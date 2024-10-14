@@ -8,7 +8,7 @@ public class Npc : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.tag == "Player" && GameManager.manager.talk.activeSelf == false)
         {
             talk_Tool.SetActive(true);
         }
@@ -18,6 +18,7 @@ public class Npc : MonoBehaviour
         if (collision.tag == "Player")
         {
             talk_Tool.SetActive(false);
+            GameManager.manager.talk.SetActive(false);
         }
     }
 }
