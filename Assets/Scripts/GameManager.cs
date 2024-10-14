@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public int player_num;
     public GameObject player;
+    public TextMeshProUGUI playerName = null;
     public GameObject player1_Sprite;
     public GameObject player2_Sprite;
 

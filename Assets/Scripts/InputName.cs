@@ -10,7 +10,6 @@ public class InputName : MonoBehaviour
     //이름 설정
     public GameObject input_tool;
     public InputField inputField;
-    public TextMeshProUGUI playerName = null;
     public Button inputButton;
     //최대 최소 글자수 설정
     public int minCharacters = 2;
@@ -39,7 +38,7 @@ public class InputName : MonoBehaviour
     public void Input()
     {
         character.SetActive(false);
-        playerName.text = inputField.text;
+        GameManager.manager.playerName.text = inputField.text;
 
         if (GameManager.manager.player_num == 1)
         {
